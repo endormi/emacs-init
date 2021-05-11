@@ -15,6 +15,7 @@
   (package-refresh-contents))
 
 (unless (package-installed-p 'use-package)
+  (package-refresh-contents)
   (package-install 'use-package))
 
 (require 'use-package)
@@ -26,6 +27,13 @@
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
+
+(use-package indent-guide)
+(indent-guide-global-mode)
+
+(use-package format-all)
+(add-hook 'format-all-mode-hook
+	  'format-all-ensure-formatter)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
@@ -44,3 +52,5 @@
 (dolist (mode '(shell-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
+(add-hook 'before-save-hook
+	  'delete-trailing-whitespace)
