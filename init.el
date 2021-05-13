@@ -42,6 +42,7 @@
 (setq create-lockfiles nil)
 (setq kill-do-not-save-duplicates t)
 (setq ring-bell-function 'ignore)
+(setq indent-tabs-mode nil)
 
 (scroll-bar-mode 0)
 (menu-bar-mode 0)
