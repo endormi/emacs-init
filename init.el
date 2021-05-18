@@ -10,6 +10,7 @@
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")))
 ;;; My custom file
 (setq custom-file "~/.emacs.d/custom.el")
+(load custom-file t)
 
 (unless package-archive-contents
   (package-refresh-contents))
