@@ -36,6 +36,11 @@
 (add-hook 'format-all-mode-hook
 	  'format-all-ensure-formatter)
 
+;;; TODO
+(use-package ansi-color)
+(defun display-ansi-colors ()
+  (ansi-color-apply-on-region (point)))
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 (setq inhibit-startup-message t)
