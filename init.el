@@ -1,5 +1,5 @@
 ;;; This my init.el file
-;;; Emacs 26
+
 ;;; Not compatible with Emacs 25 or lower
 
 ;;; TODO
@@ -8,6 +8,7 @@
 (package-initialize)
 
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")))
+
 ;;; My custom file
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file t)
