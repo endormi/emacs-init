@@ -1,5 +1,5 @@
 ;;; This my init.el file
-
+;;; Emacs 26
 ;;; Not compatible with Emacs 25 or lower
 
 ;;; TODO
@@ -8,7 +8,6 @@
 (package-initialize)
 
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")))
-
 ;;; My custom file
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file t)
@@ -38,6 +37,19 @@
 	  'format-all-ensure-formatter)
 
 ;;; TODO
+(use-package expand-region
+    :bind ("C-=" . er/expand-region))
+
+(defun er/add-text-mode-expansions ()
+    (make-variable-buffer-local 'er/try-expand-list)
+    (setq er/try-expand-list (append
+                              er/try-expand-list
+                              '(mark-paragraph
+                                mark-page))))
+
+(add-hook 'text-mode-hook 'er/add-text-mode-expansions)
+
+;;; TODO
 (use-package ansi-color)
 (defun display-ansi-colors ()
   (ansi-color-apply-on-region (point)))
@@ -51,7 +63,6 @@
 (setq ring-bell-function 'ignore)
 (setq indent-tabs-mode nil)
 (setq sentence-end-double-space nil)
-(setq column-number-mode t)
 
 (scroll-bar-mode 0)
 (menu-bar-mode 0)
@@ -60,6 +71,7 @@
 (show-paren-mode 1)
 (delete-selection-mode 1)
 
+(column-number-mode)
 (global-display-line-numbers-mode t)
 
 (dolist (mode '(shell-mode-hook))
