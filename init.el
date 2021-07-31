@@ -76,6 +76,9 @@
 (defun display-ansi-colors ()
   (ansi-color-apply-on-region (point)))
 
+(use-package saveplace)
+(save-place-mode t)
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 (setq inhibit-startup-message t)
