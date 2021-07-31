@@ -104,3 +104,9 @@
 
 (add-hook 'before-save-hook
 	  'delete-trailing-whitespace)
+
+;;; TODO
+(setq comment-auto-fill-only-comments t)
+(auto-fill-mode 1)
+(add-hook 'text-mode-hook
+	  (lambda () (auto-fill-mode -1)))
