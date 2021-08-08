@@ -44,7 +44,10 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
+;;; TODO:
+;;; kbds can be changed later, depending on what I add
 (global-set-key (kbd "C-x 1") 'beginning-of-buffer)
+(global-set-key (kbd "C-x 0") 'end-of-buffer)
 
 (use-package markdown-mode
   :ensure t
