@@ -44,6 +44,8 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
+(global-set-key (kbd "C-x 1") 'beginning-of-buffer)
+
 (use-package markdown-mode
   :ensure t
   :mode (("README\\.md\\'" . gfm-mode)
