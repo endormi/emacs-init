@@ -49,6 +49,7 @@
 (global-set-key (kbd "C-x 1") 'beginning-of-buffer)
 (global-set-key (kbd "C-x 0") 'end-of-buffer)
 (global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "C-x M-x") 'kill-emacs)
 ;;; multi-occur-in-matching-buffers
 (global-set-key (kbd "C-c C-s") 'multi-isearch-buffers)
 
