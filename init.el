@@ -50,6 +50,7 @@
 (global-set-key (kbd "C-x 0") 'end-of-buffer)
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-x M-x") 'kill-emacs)
+(global-set-key (kbd "C-c \\") 'newline)
 ;;; multi-occur-in-matching-buffers
 (global-set-key (kbd "C-c C-s") 'multi-isearch-buffers)
 
