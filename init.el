@@ -44,15 +44,24 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
+;;; defun()
+
+(defun kill-other-buffers ()
+  "Kill all other buffers."
+  (interactive)
+  (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
+
 ;;; TODO:
 ;;; kbds can be updated later, depending on what I might add later
 (global-set-key (kbd "C-x 1") 'beginning-of-buffer)
 (global-set-key (kbd "C-x 0") 'end-of-buffer)
 (global-set-key (kbd "C-z") 'undo)
-(global-set-key (kbd "C-x M-x") 'kill-emacs)
+(global-set-key (kbd "C-x x") 'kill-emacs)
 (global-set-key (kbd "C-c \\") 'newline)
-;;; multi-occur-in-matching-buffers
+(global-set-key (kbd "C-c C-f") 'multi-occur-in-matching-buffers)
 (global-set-key (kbd "C-c C-s") 'multi-isearch-buffers)
+;;; Kill all buffers, expect the one currently in use
+(global-set-key (kbd "C-x M-x") 'kill-other-buffers)
 
 (use-package markdown-mode
   :ensure t
