@@ -49,6 +49,18 @@
   (interactive)
   (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
 
+(defun duplicate-line()
+  "Duplicate current line."
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank)
+  (move-beginning-of-line 1)
+)
+
 ;;; TODO:
 ;;; kbds can be updated later, depending on what I might add later
 (global-set-key (kbd "C-x 1") 'beginning-of-buffer)
@@ -60,6 +72,7 @@
 (global-set-key (kbd "C-c C-s") 'multi-isearch-buffers)
 ;;; Kill all buffers, expect the one currently in use
 (global-set-key (kbd "C-x M-x") 'kill-other-buffers)
+(global-set-key (kbd "C-c C-d") 'duplicate-line)
 
 (use-package markdown-mode
   :ensure t
