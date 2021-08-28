@@ -44,8 +44,6 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-;;; defun()
-
 (defun kill-other-buffers ()
   "Kill all other buffers."
   (interactive)
