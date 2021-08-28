@@ -125,6 +125,7 @@
 
 (show-paren-mode 1)
 (delete-selection-mode 1)
+(electric-pair-mode 1)
 
 (column-number-mode)
 (global-display-line-numbers-mode t)
