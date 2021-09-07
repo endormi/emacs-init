@@ -44,10 +44,15 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-(defun kill-other-buffers ()
+(defun kill-other-buffers()
   "Kill all other buffers."
   (interactive)
   (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
+
+(defun kill-all-buffers()
+  "Kill all buffers."
+  (interactive)
+  (mapc 'kill-buffer (buffer-list)))
 
 (defun duplicate-line()
   "Duplicate current line."
@@ -71,6 +76,7 @@
 (global-set-key (kbd "C-c C-s") 'multi-isearch-buffers)
 ;;; Kill all buffers, except the one currently in use
 (global-set-key (kbd "C-x M-x") 'kill-other-buffers)
+(global-set-key (kbd "C-x M-z") 'kill-all-buffers)
 (global-set-key (kbd "C-c C-d") 'duplicate-line)
 
 (use-package markdown-mode
