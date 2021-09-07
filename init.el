@@ -86,6 +86,8 @@
 (global-set-key (kbd "C-x M-z") 'kill-all-buffers)
 (global-set-key (kbd "C-c C-d") 'duplicate-line)
 (global-set-key (kbd "C-c M-f") 'open-new-frame-horizontally)
+(global-set-key (kbd "C-x C-M-k") 'kill-line)
+(global-set-key (kbd "C-c C-M-v") 'yank)
 
 (use-package markdown-mode
   :ensure t
