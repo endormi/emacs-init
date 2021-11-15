@@ -123,6 +123,9 @@
 (use-package saveplace)
 (save-place-mode t)
 
+(use-package ctrlf)
+(ctrlf-mode +1)
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 (setq inhibit-startup-message t)
