@@ -126,6 +126,10 @@
 (use-package ctrlf)
 (ctrlf-mode +1)
 
+(use-package which-key)
+(which-key-mode)
+(which-key-setup-side-window-right-bottom)
+
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 (setq inhibit-startup-message t)
