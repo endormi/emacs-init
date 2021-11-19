@@ -72,6 +72,11 @@
   (balance-windows)
   (other-window 1))
 
+(defun unfill-paragraph()
+  "Unfills paragraph"
+  (interactive)
+  (let ((fill-column (point-max))) (fill-paragraph nil)))
+
 ;;; TODO:
 ;;; kbds can be updated later, depending on what I might add later
 (global-set-key (kbd "C-x 1") 'beginning-of-buffer)
@@ -87,6 +92,7 @@
 (global-set-key (kbd "C-c C-d") 'duplicate-line)
 (global-set-key (kbd "C-c M-f") 'open-new-frame-horizontally)
 (global-set-key (kbd "C-c C-v") 'yank)
+(global-set-key (kbd "<f5>") 'unfill-paragraph)
 
 (use-package markdown-mode
   :ensure t
