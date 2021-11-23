@@ -73,7 +73,7 @@
   (other-window 1))
 
 (defun unfill-paragraph()
-  "Unfills paragraph"
+  "Unfills paragraph."
   (interactive)
   (let ((fill-column (point-max))) (fill-paragraph nil)))
 
@@ -83,6 +83,7 @@
 (global-set-key (kbd "C-x 0") 'end-of-buffer)
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-x x") 'kill-emacs)
+;;; Override C-j at some point
 (global-set-key (kbd "C-c \\") 'newline)
 (global-set-key (kbd "C-c C-f") 'multi-occur-in-matching-buffers)
 (global-set-key (kbd "C-c C-s") 'multi-isearch-buffers)
