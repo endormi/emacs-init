@@ -95,6 +95,8 @@
 (global-set-key (kbd "C-c C-v") 'yank)
 (global-set-key (kbd "<f5>") 'unfill-paragraph)
 
+(global-unset-key (kbd "<insert>"))
+
 (use-package markdown-mode
   :ensure t
   :mode (("README\\.md\\'" . gfm-mode)
