@@ -86,6 +86,7 @@
   (newline)
   (newline)
   (beginning-of-buffer)
+  ;;; insert needs to be fixed
   (insert "!#/usr/bin/" lang))
 
 ;;; TODO:
