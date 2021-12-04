@@ -87,7 +87,7 @@
   (newline)
   (beginning-of-buffer)
   ;;; insert needs to be fixed
-  (insert "!#/usr/bin/" lang))
+  (insert "" lang))
 
 ;;; TODO:
 ;;; kbds can be updated later, depending on what I might add later
@@ -104,7 +104,7 @@
 (global-set-key (kbd "C-c C-d") 'duplicate-line)
 (global-set-key (kbd "C-c M-f") 'open-new-frame-horizontally)
 (global-set-key (kbd "C-c C-v") 'yank)
-(global-set-key (kbd "C-j") 'she-bang)
+;;; (global-set-key (kbd "C-j") 'she-bang)
 (global-set-key (kbd "<f5>") 'unfill-paragraph)
 
 (global-unset-key (kbd "<insert>"))
