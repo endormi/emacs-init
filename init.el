@@ -154,12 +154,14 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 (setq inhibit-startup-message t)
+(setq inhibit-splash-screen t)
 (setq initial-scratch-message nil)
 (setq create-lockfiles nil)
 (setq kill-do-not-save-duplicates t)
 (setq ring-bell-function 'ignore)
 (setq indent-tabs-mode nil)
 (setq sentence-end-double-space nil)
+(setq package-enable-at-startup nil)
 
 (scroll-bar-mode 0)
 (menu-bar-mode 0)
