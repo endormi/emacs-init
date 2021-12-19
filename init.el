@@ -182,6 +182,9 @@
 (dolist (mode '(shell-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
+(dolist (mode '(term-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
+
 (add-hook 'before-save-hook
 	  'delete-trailing-whitespace)
 
