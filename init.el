@@ -125,14 +125,14 @@
 
 ;;; TODO
 (use-package expand-region
-    :bind ("C-=" . er/expand-region))
+  :bind ("C-=" . er/expand-region))
 
 (defun er/add-text-mode-expansions ()
-    (make-variable-buffer-local 'er/try-expand-list)
-    (setq er/try-expand-list (append
-                              er/try-expand-list
-                              '(mark-paragraph
-                                mark-page))))
+  (make-variable-buffer-local 'er/try-expand-list)
+  (setq er/try-expand-list (append
+			    er/try-expand-list
+			    '(mark-paragraph
+			      mark-page))))
 
 (add-hook 'text-mode-hook 'er/add-text-mode-expansions)
 
